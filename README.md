@@ -69,3 +69,11 @@ monitor-only mode. This will display the status screen without attempting to con
 ```bash                                                                                                                    
 sudo python3 src/main.py -OnlyMonitor                                                                                      
 ```
+
+## Logging                                                                                                     
+*   General application logs are stored in the `logs/` directory.                                                                                                                            
+*   Raw AT command logs, which show the back-and-forth communication with the modem, are stored in `at_command_logs/`.
+
+## Acknowledgements
+This project is a direct port and adaptation of the excellent                                                             [fibocom-connect-l8x0](https://github.com/prusa-dev/fibocom-connect-l8x0) tool. All   
+credit for the original AT command sequences, connection logic, and overall approach goes to prusa-dev.
