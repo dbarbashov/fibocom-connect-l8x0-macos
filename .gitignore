@@ -1,0 +1,5 @@
+logs/
+at_command_logs/
+.DS_Store
+__pycache__
+.aider*
