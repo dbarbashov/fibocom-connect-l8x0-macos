@@ -15,7 +15,7 @@ This project is a Python port of the original PowerShell-based [fibocom-connect-
 ## Prerequisites
 
 *   Python 3.6+
-*   A Fibocom L8x0 series modem (e.g., L850-GL) connected to your computer.
+*   A Fibocom L8x0 series modem (e.g., L860-GL) connected to your computer.
 *   Administrator (`sudo`/root) privileges are required to configure the network interface.
 
 ## Installation and Configuration
@@ -49,3 +49,23 @@ This project is a Python port of the original PowerShell-based [fibocom-connect-
 The script must be run with `sudo` because it needs permission to modify your system's network settings.
 
 **To connect and monitor the connection:**
+```bash                                                                                                                    
+sudo python3 src/main.py                                                                                                   
+```                                                                                                                        
+                                                                                                                           
+The script will then:                                                                                                      
+1.  Find the modem and network interface.                                                                                  
+2.  Establish a connection.                                                                                                
+3.  Configure the network on your computer.                                                                                
+4.  Display a live status monitor in the terminal.                                                                         
+                                                                                                                           
+Press `CtrlC` to disconnect and exit the application.                                                                     
+                                                                                                                           
+**To monitor an existing connection (without re-initializing):**                                                           
+                                                                                                                           
+If the modem is already connected (e.g., by another process or on a previous run), you can start the script in a           
+monitor-only mode. This will display the status screen without attempting to configure the modem or the network.            
+                                                                                                                           
+```bash                                                                                                                    
+sudo python3 src/main.py -OnlyMonitor                                                                                      
+```
